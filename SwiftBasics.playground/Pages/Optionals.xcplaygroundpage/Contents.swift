@@ -26,6 +26,27 @@ import Foundation
 var myPostCode: String? = "30332"
 var myAddress: String = "North Avenue, GT, "
 
+if let myPostCodeUnwrapped = myPostCode {
+    myAddress = "North Avenue, GT, \(myPostCode!)"
+}
+print(myAddress)
+
+guard let myPostCodeUnwrapped = myPostCode else{
+    fatalError("Postcode is nil!")
+}
+myAddress = "North Avenue, GT, \(myPostCode!)"
+print(myAddress)
+
+if myPostCode != nil {
+    myAddress = "North Avenue, GT, \(myPostCode!)"
+}
+print(myAddress)
+
+myAddress = "North Avenue, GT, \(myPostCode ?? "")"
+print(myAddress)
+
+
+
 /* CHALLENGE 2: If a rank exists (has a value, not nil), set the endOfGameSummary to "Congrats! You've achieved rank X in this round." where X is the value stored in myRank. Otherwise, set the endOfGameSummary to "You did not achieve a rank in this round. Better luck next time!". Repeat this logic using each of the following once:
         - “if let”
         - “guard let”
@@ -33,9 +54,24 @@ var myAddress: String = "North Avenue, GT, "
 
     Use fatalError() inside the 'else block' of your "guard let", so that Xcode doesn't complain.
  */
-var myRank: Int? = nil
+var myRank: Int? = 6
 var endOfGameSummary: String = "None"
 
+if let myRankUnwrapped = myRank {
+    endOfGameSummary = "Congrats! You've achieved rank \(myRankUnwrapped) in this round."
+} else {
+    endOfGameSummary = "You did not achieve a rank in this round. Better luck next time!"
+}
+print(endOfGameSummary)
+
+guard let myRankUnwrapped = myRank else {
+    fatalError("You did not achieve a rank in this round. Better luck next time!")
+}
+endOfGameSummary = "Congrats! You've achieved rank \(myRankUnwrapped) in this round."
+print(endOfGameSummary)
+
+endOfGameSummary = myRank != nil ? "Congrats! You've achieved rank \(myRank!) in this round." : "You did not achieve a rank in this round. Better luck next time!"
+print(endOfGameSummary)
 /*
  CHALLENGE 3: You are currently cooking your lunch.
     - The variable amountOfFoodInsidePan tells you how much food you have in your pan. If this variable has no value (nil), this means that we don't have a pan to use and are unable to cook.
@@ -53,11 +89,38 @@ var foodStock: Int = 20
 var amountOfFoodInsidePan: Int? = 5
 var cookingMode: String? = nil
 
+guard let pan = amountOfFoodInsidePan, foodStock != 0 else {
+    fatalError("I give up.")
+}
+if cookingMode != nil {
+    switch cookingMode {
+    case "High":
+        cookingMode = "Medium"
+    case "Medium":
+        cookingMode = "Low"
+    case "Low":
+        cookingMode = nil
+    default:
+        break
+    }
+}
+foodStock -= 3
+amountOfFoodInsidePan! += 3
+
+
 
 
 // CHALLENGE 4: Assign the length of optional string 'myString' to variable 'length'. You are NOT allowed to perform any force unwrapping in the solution and are NOT allowed to perform "if myString == nil". (maybe you should explore the other methods of unwrapping)
 // If myString has no value, you can set it to 0.
 let myString: String? = "iOS Club"
 var length: Int = -1
+
+if let unwrappedString = myString {
+    length = unwrappedString.count
+} else {
+    length = 0
+}
+print(length)
+
 
 // <- [CLICK HERE TO RUN ME], don't worry if you get an error. It's probably because of the `fatalError()` call we told you to make.
