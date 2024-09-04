@@ -11,6 +11,13 @@
 - [ ] Referencing optionals.
 - [ ] Safely unwrap optionals.
 
+## Getting Started
+
+Clone this repo to your local device. 
+
+Refer to the [Assignments](https://gt-ios-club.notion.site/Assignments-1b6cb97d5c7b467d9bc176de64578453?pvs=4) notion page on how to do so.
+
+Once you've cloned the repo, open the CarsApp project using Xcode if you haven't already.
 
 ## Content
 
