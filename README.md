@@ -12,55 +12,6 @@
 - [ ] Safely unwrap optionals.
 
 
-## Requirement
-
-Fork this repo using the instructions outlined below.
-
-For each module, you'll be creating a fork of the module repo which will be
-associated with your account.
-
-To fork, click on the "Fork" button on this module's Github page.
-It should be located between "Watch" and "Star".
-
-![Image highlighting the Fork button on Github.](module0-img1.png)
-
-In the *Create a new fork* page, you shouldn't need to change anything, but
-it should have the following configuration:
-
-- Owner is your github account
-- Repository name is identical to forking repo (`bootcamp-module-1`)
-- The option to *copy the main branch only* is checked.
-
-![Image showing fork creation screen.](module0-img2.png)
-
-After pressing the *Create fork* button, you should be redirected to your
-newly forked repo page.
-
-### Clone a repo with Xcode
-
-1. Open the Xcode app and click `Clone Git Repository`
-
-![Image showing Github clone popup within forked repo.](module0-img4.png)
-
-2. Enter the URL of the git repo. Refer to the image below to locate the URL.
-   _Note:_ Make sure to clone the **SSH** url, _not_ the HTTPS url.
-   
-![Image showing Github clone popup within forked repo.](module0-img3.png)
-
-3. Select the folder you want to store the repo. You'll need this throughout
-   the course so don't just put it in your downloads!
-
-4. Xcode should now open up with the cloned repo. Or it'll crash. It's Xcode.
-
-5. If Xcode doesn't open immediately, go to the folder you just cloned and right click on `SwiftBasics.playground`, select Open With -> Xcode.
-
-#### Command line equivalent
-
-```
-cd [project destination path]
-git clone https://github.com/gtiosclub/bootcamp-module-1.git
-```
-
 ## Content
 
 ### Variables and Data Types
@@ -92,6 +43,7 @@ You will find this section much more challenging than the preceding ones. This i
 
 ## Submission
 
-Make sure you have committed and pushed your local changes to the remote repo, so that we can see your work when we access this link. Refer to module-0 and the Git slides from Day 2 if you are having trouble, or reach out via Discord.
+Check the [Assignments](https://gt-ios-club.notion.site/Assignments-1b6cb97d5c7b467d9bc176de64578453?pvs=4) notion page for submission instructions! 
 
-To submit your work, paste the link for the forked repo next to your name under Week 2 &rarr; Assignment of the Student Dashboard (Notion). Make sure you are logged into your Notion account, otherwise you won't have edit permissions.
+If you are having trouble, feel free to reach out via Discord.
+
