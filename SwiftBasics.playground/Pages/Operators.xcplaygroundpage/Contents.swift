@@ -75,8 +75,10 @@ c = 10
 
 var result1: Int = -1 // Declared but uninitialized.
 func challenge1() -> Void {
-    // CODE GOES HERE
+    result1 = (a+b)*c
 }
+challenge1()
+print(result1)
 
 /*
  CHALLENGE 2:
@@ -88,8 +90,10 @@ c = 4
  
 var result2: Int = -1 // Declared but uninitialized.
 func challenge2() -> Void {
-    // CODE GOES HERE
+    result2 = (result1-a)-(b+c)
 }
+challenge2()
+print(result2)
 
 /*
  CHALLENGE 3:
