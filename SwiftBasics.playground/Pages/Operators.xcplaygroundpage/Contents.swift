@@ -75,9 +75,10 @@ c = 10
 
 var result1: Int = -1 // Declared but uninitialized.
 func challenge1() -> Void {
-    // CODE GOES HERE
+    result1 = (a + b) * c
 }
 
+challenge1()
 /*
  CHALLENGE 2:
     Divide the value in 'result1' by a. Subtract the result of that by b+c. Store the end value of this computation in result2.
@@ -88,8 +89,9 @@ c = 4
  
 var result2: Int = -1 // Declared but uninitialized.
 func challenge2() -> Void {
-    // CODE GOES HERE
+    result2 = (result1 / a) - (b+c)
 }
+challenge2()
 
 /*
  CHALLENGE 3:
@@ -102,7 +104,9 @@ e = " years."
 var result3: String = "" // Declared but uninitialized.
 func challenge3() -> Void {
     // CODE GOES HERE
+    result3 = d + String(result2) + e
 }
+challenge3()
 
 /*
  CHALLENGE 4:
@@ -117,8 +121,9 @@ e = ". That's unfortunate."
 var result4: String = "" // Declared but uninitialized.
 func challenge4() -> Void {
     // CODE GOES HERE
-    
+    result4 = d + "\(a % b)" + e
 }
+challenge4()
 
 /*
  CHALLENGE 5:
@@ -127,4 +132,7 @@ func challenge4() -> Void {
  */
 func challenge5() -> Void {
     // CODE GOES HERE
+    a += 10
+    b *= a
 }
+challenge5()
