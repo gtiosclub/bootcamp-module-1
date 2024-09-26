@@ -25,6 +25,19 @@ import Foundation
  */
 var myPostCode: String? = "30332"
 var myAddress: String = "North Avenue, GT, "
+if var myPostCode {
+    myAddress = myAddress + myPostCode
+}
+
+/*
+guard myPostCode != nil else {
+    fatalError()
+}
+myAddress = myAddress + myPostCode!
+// coalescing uses ??
+var code: String = myPostCode ?? "30332"
+*/
+
 
 /* CHALLENGE 2: If a rank exists (has a value, not nil), set the endOfGameSummary to "Congrats! You've achieved rank X in this round." where X is the value stored in myRank. Otherwise, set the endOfGameSummary to "You did not achieve a rank in this round. Better luck next time!". Repeat this logic using each of the following once:
         - “if let”
@@ -35,6 +48,19 @@ var myAddress: String = "North Avenue, GT, "
  */
 var myRank: Int? = nil
 var endOfGameSummary: String = "None"
+if let myRank {
+    endOfGameSummary = "Congrats! You've achieved rank \(myRank) in this round."
+} else {
+    endOfGameSummary = "Better luck next time!"
+}
+/*
+guard let myRank else {
+    fatalError()
+}
+endOfGameSummary = "Congrats! You've achieved rank \(myRank) in this round."
+
+endOfGameSummary = myRank != nil ? "Congrats! You've achieved rank \(myRank) in this round." : "Better luck next time!"
+*/
 
 /*
  CHALLENGE 3: You are currently cooking your lunch.
@@ -49,15 +75,33 @@ var endOfGameSummary: String = "None"
         - Take 3 items from the foodStock, and add it to the pan (amountOfFoodInsidePan)
     - You must use a 'guard let' / 'guard' statement at least once. (do you know which part may benefit from this?)
 */
+/*
 var foodStock: Int = 20
 var amountOfFoodInsidePan: Int? = 5
 var cookingMode: String? = nil
-
+guard var amountOfFoodInsidePan, foodStock <= 0 else {
+    print("Gif up")
+    fatalError()
+}
+if (cookingMode != nil) {
+    if (cookingMode == "Low") {
+        cookingMode = nil
+    } else if (cookingMode == "Med") {
+        cookingMode = "Low"
+    } else {
+        cookingMode = "High"
+    }
+    foodStock -= 3
+    amountOfFoodInsidePan += 3
+}
+*/
 
 
 // CHALLENGE 4: Assign the length of optional string 'myString' to variable 'length'. You are NOT allowed to perform any force unwrapping in the solution and are NOT allowed to perform "if myString == nil". (maybe you should explore the other methods of unwrapping)
 // If myString has no value, you can set it to 0.
 let myString: String? = "iOS Club"
 var length: Int = -1
-
+if let myString {
+    length = myString.count
+}
 // <- [CLICK HERE TO RUN ME], don't worry if you get an error. It's probably because of the `fatalError()` call we told you to make.
