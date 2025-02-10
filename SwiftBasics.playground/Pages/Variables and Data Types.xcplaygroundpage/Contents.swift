@@ -44,6 +44,14 @@ print(
 // <- [CLICK HERE TO RUN ME]
 
 // TODO: After a quick refresher of data types, we have a series of challenges. Declare variables using the given prompts, be sure to adhere to all constraints of the prompt. As we've done above, explicitly state the type whenever you declare a variable:
+var myName: String = "Peter"
+let favouriteNumber: Int = 99
+var myMother: String = "Mary"
+var collegeGPA: Double? = nil
+let highSchoolGPA: Double = 3.9
+var iOSDevIsTheBest: Bool = true
+let earthIsFlat: Bool? = false
+var myBalance: Double = 3.494799789977
 
 // PROMPT 1: Declare a mutable variable called 'myName' of type String with initial value “Peter”.
 
